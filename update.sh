@@ -4,7 +4,7 @@
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # Pfad zum updater-Ordner im selben Verzeichnis
-REPO_DIR="$SCRIPT_DIR/updater"
+REPO_DIR="$SCRIPT_DIR"
 
 # URL des Git-Repositories
 REMOTE_URL="https://github.com/diggerwf/Updater.git"
