@@ -72,3 +72,4 @@ fi
 chmod +x "$UPDATE_SCRIPT"
 
 echo "Update abgeschlossen oder kein Update erforderlich."
+#
