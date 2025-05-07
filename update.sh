@@ -1,6 +1,9 @@
 #!/bin/bash
 
-REPO_DIR="$HOME/updater"
+# Bestimme das Verzeichnis, in dem das Skript liegt
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+REPO_DIR="$SCRIPT_DIR/updater"
 REMOTE_URL="https://github.com/diggerwf/Updater.git"
 
 if [ ! -d "$REPO_DIR" ]; then
@@ -11,6 +14,7 @@ else
     if [ -d ".git" ]; then
         echo "Repository gefunden. Aktualisiere..."
         git fetch origin
+
         LOCAL=$(git rev-parse @)
         REMOTE=$(git rev-parse origin/main)
         BASE=$(git merge-base @ origin/main)
